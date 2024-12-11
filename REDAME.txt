@@ -1,0 +1,41 @@
+Hand Gesture Control for Mouse and Scroll
+This project leverages MediaPipe and OpenCV to control the mouse and scroll actions using hand gestures. It detects hand landmarks using MediaPipe, interprets gestures for mouse clicks, dragging, and scrolling, and performs corresponding actions on the screen.
+
+Features
+Mouse Movement: Control the cursor position using the index finger tip.
+Clicking: Perform a click action by pinching the index finger and thumb together.
+Dragging: Drag items by consistently pinching the index finger and thumb.
+Scrolling: Scroll up or down based on the vertical movement of the index finger and its base (PIP joint).
+Dependencies
+mediapipe: For hand landmark detection.
+opencv-python: For video capture and image processing.
+numpy: For numerical operations.
+pyautogui: For controlling mouse actions.
+time: For managing delays.
+You can install the required Python packages using pip:
+
+bash
+Copy code
+pip install mediapipe opencv-python numpy pyautogui
+Usage
+Run the Script: Execute the Python script to start the hand gesture control system.
+
+bash
+Copy code
+python hand_gesture_control.py
+Position Your Hand: Make sure your hand is within the camera's view. The script will detect your hand landmarks and map gestures to mouse and scroll actions.
+
+Gestures:
+
+Mouse Movement: Move your index finger to control the cursor.
+Click: Pinch your index finger and thumb together.
+Drag: Continuously pinch your index finger and thumb.
+Scroll: Move your index finger up or down to scroll.
+Exit: Press the 'q' key to quit the application.
+
+Configuration
+Click Threshold: Distance threshold for detecting a click gesture.
+Drag Threshold: Distance threshold for detecting a drag gesture.
+Click Frames: Number of consecutive frames required to register a click.
+Cursor Speed: Adjusts the speed of the cursor movement.
+Scroll Speed: Adjusts the sensitivity of scrolling.
